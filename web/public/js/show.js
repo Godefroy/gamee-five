@@ -23,8 +23,8 @@ socket.on("reconnect", function(message) {
 
 // Show players balls
 var Show = {
-  maxChangeSpeed: 3,
-  maxSpeed: 5,
+  maxChangeSpeed: 100,
+  maxSpeed: 8,
   balls: [],
 
   updatePlayers: function(players) {
@@ -36,11 +36,7 @@ var Show = {
       });
 
       if (ball) {
-        var vector = new Point(player.orientation.y, player.orientation.x);
-        if (vector.length > this.maxChangeSpeed) {
-          vector = vector.normalize(this.maxChangeSpeed);
-        }
-        vector = ball.vector + vector;
+        var vector = ball.vector + new Point(player.orientation.y, player.orientation.x) / 2025 * this.maxChangeSpeed; // Max length = 45^2 = 2025
         if (vector.length > this.maxSpeed) {
           vector = vector.normalize(this.maxSpeed);
         }
