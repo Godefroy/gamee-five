@@ -1,0 +1,27 @@
+
+body {
+    margin: 50px;
+    background-color: #383838;
+    font-family: Georgia, serif;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    color: #FFFBCB;
+    font-size: 40px;
+    letter-spacing: 7px;
+    margin-bottom: 50px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+
+p.warning {
+    display: none;
+    color: #cc6971;
+}

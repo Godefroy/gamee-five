@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Gamee Five - Play
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" type="text/css" href="/public/css/play.css")
+  body
+    h1 Gamee Five
+    p#warning-incompatible.warning Votre appareil ne semble pas compatible :-(
+    p#warning-connection.warning Connexion perdue. Tentative de reconnexion...
+    p Désactivez la rotation automatique de l'écran.
+    p Inclinez votre smartphone pour déplacer votre balle.
+    p Devinez quelle est votre balle et formez des motifs avec les balles des autres.
+    script(src="/socket.io/socket.io.js")
+    script(src="/public/js/play.js")
